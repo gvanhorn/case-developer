@@ -8,9 +8,10 @@ Zoek contact als je er echt niet uit komt. Het is niet de bedoeling om een produ
 
 ### De opdracht :page_facing_up:
 Je levert een front-end op voor een deelnemer bij BeFrank. Hierop is de verwachte waarde van de pensioenpot op de geplande pensioendatum te zien. 
+De deelnemer heeft de mogelijkheid om de verwachte pensioenleeftijd aan te passen en ziet dan het effect op de grootte van de pensioenpot op pensioendatum. 
 De data voor dit front-end komt uit een java applicatie die hiervoor gegevens zal lezen uit een onderliggende database. 
-Daarnaast maakt de applicatie gebruik van een REST koppeling met een externe beleggingservice om de huidige waarde van de beleggingsrekening op te halen. 
-De deelnemer heeft de mogelijkheid om de verwachte pensioenleeftijd aan te passen en ziet dan het effect op de grootte van de pensioenpot op pensioendatum.
+Daarnaast maakt deze java applicatie gebruik van een REST koppeling met een externe beleggingservice om de huidige waarde van de beleggingsrekening op te halen. 
+
 ```mermaid
   graph LR;
       A[Frontend]-->|Aanpassen pensioenleeftijd|B[Web applicatie];

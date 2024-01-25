@@ -90,7 +90,7 @@ Dan levert dit een verwachte waarde op pensioendatum van 125.498,08 euro
 
 ### Aan de slag!
 Gebruik in het uitwerken van de case de volgende technieken:  
-• Minimaal Java 11  
+• Minimaal Java 21  
 • Spring Boot  
 • Angular  
 • JPA  

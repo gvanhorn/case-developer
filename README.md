@@ -100,3 +100,30 @@ Gebruik in het uitwerken van de case de volgende technieken:
 Stuur een link naar de git repository op Github (of een andere service) naar ons op. Voeg een korte beschrijving van je oplossing met een paar screenshots van de werkende applicatie toe. BeFrank zal de oplossing beoordelen en in je tweede gesprek kan je de gemaakte keuzes verder toelichten.
 
 **:grey_question: Mocht je vragen hebben, schroom niet om contact op te nemen!**
+
+#### Bouwen en starten van het project met docker compose
+
+Stappenplan bouwen en starten:
+1. Kopieer de .env.example naar .env en vul de gewenste waardes in
+2. Voer de volgende commando uit in de root van het project
+```shell
+docker compose up -d
+```
+
+#### Voor het lokaal draaien en ontwikkelen met intellij IDEA:
+
+Voor het gemak staan er in deze repository wat bestanden die gebruikt kunnen worden voor een dev omgeving in IntelliJ Idea.
+Volg deze stappen om de applicaties te starten:
+
+1. Kopieer de .env.example naar .env en vul de gewenste waardes in
+2. Start de database container:
+```shell
+docker compose up -d postgres
+```
+3. Kopieer de configuratie van de API, van [case-developer-java/src/main/resources/application.yaml](case-developer-java/src/main/resources/application.yaml) naar [case-developer-java/config/application.yaml](case-developer-java/config/application.yaml) en vul de waardes uit stap 1 in.
+4. Bouw de API:
+```shell
+mvn clean install -f case-developer-java/pom.xml
+```
+5. start de API met het intellij run profiel "API"
+6. start de frontend met het intellij run profiel "Frontend"

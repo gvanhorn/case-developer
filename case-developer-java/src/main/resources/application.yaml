@@ -1,5 +1,10 @@
 spring:
   datasource:
-    url=jdbc:postgresql://localhost:5432/befrankdb  
-    username=
-    password=
+    url: jdbc:postgresql://localhost:5432/befrankdb
+    username:
+    password:
+  flyway:
+    url: jdbc:postgresql://localhost:5432/befrankdb
+    user:
+    password:
+    locations: classpath:db/migration

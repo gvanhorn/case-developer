@@ -1,0 +1,80 @@
+openapi: 3.0.0
+info:
+  title: Participant API
+  version: 1.0.0
+paths:
+  /participants:
+    get:
+      summary: Get all participants
+      operationId: getParticipants
+      responses:
+        '200':
+          description: A list of participants
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Participant'
+components:
+  schemas:
+    Participant:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        date_of_birth:
+          type: string
+          format: date
+        address:
+          $ref: '#/components/schemas/Address'
+        employment:
+          $ref: '#/components/schemas/Employment'
+      required:
+        - id
+        - name
+        - date_of_birth
+        - address
+        - employment
+    Address:
+      type: object
+      properties:
+        street:
+          type: string
+        number:
+          type: string
+        city:
+          type: string
+        zipCode:
+          type: string
+        country:
+          type: string
+      required:
+        - street
+        - number
+        - city
+        - zipCode
+        - country
+    Employment:
+      type: object
+      properties:
+        companyName:
+          type: string
+        fulltimeSalary:
+          type: number
+        parttimePercentage:
+          type: number
+        franchise:
+          type: number
+        premiumPercentage:
+          type: number
+      required:
+        - companyName
+        - position
+        - fulltimeSalary
+        - parttimePercentage
+        - franchise
+        - premiumPercentage

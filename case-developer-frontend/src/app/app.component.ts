@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { environment } from '../environments/environment';
+import { ApiConfiguration } from "../api/api-configuration";
 
 @Component({
   selector: 'app-root',
@@ -11,10 +12,9 @@ import { environment } from '../environments/environment';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  apiUrl = environment.apiUrl;
   title = 'case-developer-frontend';
 
   constructor() {
-    console.log("Configured API Url: ", this.apiUrl);
+    console.log("Configured API Url: ", environment.apiUrl);
   }
 }

@@ -1,0 +1,12 @@
+<div class="participant-row">
+  <span class="header">Name</span>
+  <span class="header">Date of birth</span>
+  <span class="header">Company</span>
+  <span class="header">Pension age</span>
+  <span class="header">Expected value</span>
+  <span>{{ participant.name }}</span>
+  <span>{{ participant.date_of_birth }}</span>
+  <span>{{ participant.employment.companyName }}</span>
+  <input type="number" name="pensionAge" [(ngModel)]="pensionAge" (input)="handleUpdatePensionAge()"/>
+  <span>€{{ expectedValue }}</span>
+</div>

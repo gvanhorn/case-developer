@@ -1,5 +1,3 @@
-<ul>
-  @for (participant of participants; track participant.id) {
-    <li>{{participant.name}}</li>
-  }
-</ul>
+@for (participant of participants; track participant.id) {
+  <app-participant-row [participant]="participant"></app-participant-row>
+}

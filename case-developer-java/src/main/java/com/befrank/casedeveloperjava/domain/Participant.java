@@ -51,6 +51,10 @@ public class Participant {
     this.dateOfBirth = dateOfBirth;
   }
 
+  public int getAge() {
+    return LocalDate.now().getYear() - dateOfBirth.getYear();
+  }
+
   public Address getAddress() {
     return address;
   }

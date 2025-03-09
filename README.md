@@ -105,8 +105,9 @@ Stuur een link naar de git repository op Github (of een andere service) naar ons
 
 Stappenplan bouwen en starten:
 1. Kopieer de .env.example naar .env en vul de gewenste waardes in
-2. Voer de volgende commando uit in de root van het project
+2. Voer de volgende commando's uit in de root van het project
 ```shell
+docker compose build
 docker compose up -d
 ```
 
@@ -127,3 +128,9 @@ mvn clean install -f case-developer-java/pom.xml
 ```
 5. start de API met het intellij run profiel "API"
 6. start de frontend met het intellij run profiel "Frontend"
+
+### Screenshots:
+Hier is een screenshot van de applicatie, super simpel want mijn angular skills zijn praktisch 0.
+![image1](./Screenshot.png)
+pas de pensioenleeftijd aan en zie de verwachte waarde van de pensioenpot veranderen!
+

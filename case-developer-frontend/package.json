@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "npm run generate-api && ng serve",
+    "start": "npm run generate-api-dev && ng serve",
     "build": "npm run generate-api && ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "generate-api-dev": "ng-openapi-gen -c ng-openapi-gen-config-dev.json",
     "generate-api": "ng-openapi-gen -c ng-openapi-gen-config.json"
   },
   "private": true,

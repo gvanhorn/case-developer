@@ -1,5 +1,5 @@
 {
-  "input": "../case-developer-java/src/main/resources/api/spec.yaml",
+  "input": "./spec.yaml",
   "output": "src/api",
   "ignoreUnusedModels": false
 }

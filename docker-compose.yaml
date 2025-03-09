@@ -35,8 +35,8 @@ services:
   frontend:
     image: befrank-frontend:latest
     build:
-      context: ./case-developer-frontend
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: case-developer-frontend/Dockerfile
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.frontend.rule=PathPrefix(`/`)"

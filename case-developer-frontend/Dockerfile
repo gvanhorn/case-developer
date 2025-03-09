@@ -5,7 +5,8 @@ FROM node:20-alpine AS build
 WORKDIR /app
 
 # Copy the contents of this directory to the container
-COPY . .
+COPY ./case-developer-frontend .
+COPY ./case-developer-java/src/main/resources/api/spec.yaml .
 
 # Install dependencies
 RUN npm install

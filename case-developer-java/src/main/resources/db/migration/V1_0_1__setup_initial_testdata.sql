@@ -5,7 +5,7 @@ INSERT INTO public.employment (id, company_name, fulltime_salary, parttime_perce
 VALUES
 	('550e8400-e29b-41d4-a716-446655440001', 'BeFrank', 60000, 1, 15599, 0.05);
 
-INSERT INTO public.participant (id, name, date_of_birth, address_id, employment_id)
+INSERT INTO public.participant (id, name, date_of_birth, address_id, employment_id, investment_account_iban)
 VALUES
-	('550e8400-e29b-41d4-a716-446655440002', 'John Doe', '1965-01-01', '550e8400-e29b-41d4-a716-446655440000', '550e8400-e29b-41d4-a716-446655440001');
+	('550e8400-e29b-41d4-a716-446655440002', 'John Doe', '1965-01-01', '550e8400-e29b-41d4-a716-446655440000', '550e8400-e29b-41d4-a716-446655440001', 'NL01INVE0123456789');
 

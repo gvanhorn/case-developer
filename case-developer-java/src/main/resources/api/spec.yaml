@@ -16,6 +16,33 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Participant'
+  /participants/{id}/expectedValue/{pensionAge}:
+    get:
+      summary: Get the expected value for a participant
+      operationId: calculateExpectedValue
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the participant
+          schema:
+            type: string
+            format: uuid
+        - name: pensionAge
+          in: path
+          required: true
+          description: The parameters for the calculation
+          schema:
+            type: number
+            format: integer
+      responses:
+        '200':
+          description: The expected value for the participant
+          content:
+            application/json:
+              schema:
+                type: number
+                format: BigDecimal
 components:
   schemas:
     Participant:

@@ -20,11 +20,12 @@ CREATE TABLE IF NOT EXISTS employment
 
 CREATE TABLE IF NOT EXISTS participant
 (
-	id            UUID PRIMARY KEY,
-	name          VARCHAR(255) NOT NULL,
-	date_of_birth DATE         NOT NULL,
-	address_id    UUID,
-	employment_id UUID,
+	id                      UUID PRIMARY KEY,
+	name                    VARCHAR(255) NOT NULL,
+	date_of_birth           DATE         NOT NULL,
+	address_id              UUID,
+	employment_id           UUID,
+	investment_account_iban VARCHAR(255),
 
 	FOREIGN KEY (address_id) REFERENCES address (id),
 	FOREIGN KEY (employment_id) REFERENCES employment (id)

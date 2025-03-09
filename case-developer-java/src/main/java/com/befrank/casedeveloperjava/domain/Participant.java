@@ -25,6 +25,8 @@ public class Participant {
   @OneToOne
   private Employment employment;
 
+  private String investmentAccountIban;
+
   public UUID getId() {
     return id;
   }
@@ -63,5 +65,13 @@ public class Participant {
 
   public void setEmployment(final Employment employment) {
     this.employment = employment;
+  }
+
+  public String getInvestmentAccountIban() {
+    return investmentAccountIban;
+  }
+
+  public void setInvestmentAccountIban(final String investmentAccountIban) {
+    this.investmentAccountIban = investmentAccountIban;
   }
 }
